@@ -1,6 +1,10 @@
 const azul = document.getElementById("azul");
 const titulo = document.getElementById("titulo");
+const tituloMobile = document.getElementById("titulo-mobile");
+
 const texto = document.getElementById("texto");
+const setaClick = document.getElementById("seta-click");
+
 
 const menu = document.getElementById("menu");
 const btnAbrir = document.getElementById("abrir");
@@ -32,23 +36,26 @@ btnAbrir.addEventListener('click', function(){
 });
 
 
-//COBRIR AZUL
-// function coverBackground(event){
-//     azul.classList.toggle("cover");
-//     titulo.classList.toggle("titulo-slide");
-//     texto.classList.toggle("texto-show")
-// }
+// COBRIR AZUL
+function coverBackground(event){
+    azul.classList.toggle("cover");
+    titulo.classList.toggle("slide");
+    texto.classList.toggle("texto-show");
+    setaClick.classList.toggle("seta-slide");
 
-// window.addEventListener('click', function(){
-//     coverBackground()
-// });
+    tituloMobile.classList.toggle("slide")
+}
 
+setaClick.addEventListener('click', function(){
+    coverBackground()
+});
 
 const target = document.querySelectorAll('[data-anime]');
 const animationClass = 'animate';
 
 function animeScroll(){
     const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+    console.log(windowTop);
     target.forEach(function(element){
         if(windowTop > element.offsetTop){
             element.classList.add(animationClass);
@@ -66,3 +73,20 @@ if(target.length){
     })
 } //nao ativar caso nao tenha elementos com a classe na pagina
 
+
+//FUNÇÃO ANIMAR TEXTO
+
+// function typeWriter(el) {
+//     const textArray = el.innerHTML.split("");
+//     el.innerHTML = "";
+
+//     textArray.forEach((letter, i) => {
+//         setTimeout(()=>(el.innerHTML += letter), 95 * i);
+//     });
+
+//     setInterval(()=>{
+//         typeWriter(el);
+//     }, 5000)
+// }
+
+// typeWriter(titulo);
