@@ -526,6 +526,12 @@ footer{
         left: 98%;
         z-index: -100;
     }
+
+    .about-txt{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
     .about-txt h1{
       font-size: 1.5em;
       padding: 5px;
