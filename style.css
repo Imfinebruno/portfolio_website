@@ -478,12 +478,7 @@ footer{
     transform: rotate(-90deg);
 }
 
-@media (max-width: 900px){
-    body{
-      overflow-x: hidden;
-
-
-    }
+@media(max-width: 900px){
     hr{
       display: none;
     }
@@ -497,7 +492,7 @@ footer{
         font-size: 1em;
     }
     .menu-container{
-        width: 100%;
+        width: 100vw;
         z-index: 101;
     }
     .content{
@@ -522,7 +517,7 @@ footer{
         transition: 1.5s;
         position: absolute;
         left: 25%;
-        display: block;
+        display: flex;
         font-size: 5em;
         margin: 0 auto;
     }
