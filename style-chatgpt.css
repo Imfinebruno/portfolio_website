@@ -511,6 +511,9 @@ footer {
         align-items: center;
         transition: 1.5s;
     }
+    .texto{
+        font-size: 2em;
+    }
     .seta-click{
         z-index: 100;
         margin: 0 auto;
@@ -542,9 +545,9 @@ footer {
         flex-direction: column;
     }
     .about-txt h1{
-      font-size: 1.5em;
+      font-size: 1em;
       padding: 5px;
-      margin-top: 20px;
+      margin: 20px;
     }
     .about-txt h2{
       margin-top: 10px;
