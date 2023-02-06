@@ -6,12 +6,11 @@ const setaClick = document.getElementById("seta-click");
 const menu = document.getElementById("menu");
 const btnAbrir = document.getElementById("abrir");
 const opcoesMenu = document.querySelectorAll(".opcao");
+const darkMode = document.getElementById("dark-btn");
 
 opcoesMenu.forEach(opcao => {
     opcao.addEventListener('click', () => menu.classList.remove("ativo"));
 });
-
-
 
 //ABRIR MENU
 btnAbrir.addEventListener('click',() =>{
@@ -27,6 +26,11 @@ setaClick.addEventListener('click', () => {
     setaClick.classList.toggle("seta-slide");
     tituloMobile.classList.toggle("slide");
 });
+
+darkMode.addEventListener('click', ()=>{
+    document.querySelector('html').classList.toggle("dark-mode");
+})
+
 
 // function coverBackground(event){
 //     azul.classList.toggle("cover");

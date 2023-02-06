@@ -1,22 +1,37 @@
+:root{
+    --body-bg: #f8f8f8;
+    --body-lines: #fff;
+    --body-color: #161616;
+}
+
+.dark-mode:root{
+    --body-bg: #161616;
+    --body-lines: #161616;
+    --body-color: #fff;
+}
 body {
+    transition: 0.3s ease;
     scroll-behavior: smooth;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #F8F8F8;
+    background-color: var(--body-bg);
     overflow-x: hidden;
 }
 
 ul, li {
+    color: var(--body-color);
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
+span{
+    color: var(--body-color);
+}
 a {
     text-decoration: none;
-    color: inherit;
+    color: var(--body-color);
 }
 
 a:visited {
@@ -25,21 +40,25 @@ a:visited {
 
 header {
     margin-top: 0;
-    background-color: #fff;
+    background-color: var(--body-lines);
     height: 50px;
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: fixed;
+    z-index: 10000;
 }
 
 header h1 {
+    color: var(--body-color);
     font-size: 1em;
     margin-left: 50px;
     cursor: pointer;
 }
 
 .titulo-mobile {
+    color: var(--body-color);
     display: none;
 }
 
@@ -47,7 +66,7 @@ header h1 {
     transition: 0.5s;
     width: 30%;
     height: 100%;
-    background-color: #F8F8F8;
+    background-color: var(--body-bg);
     opacity: 0;
     visibility: hidden;
     align-items: center;
@@ -68,14 +87,19 @@ header h1 {
 .fechar-icon {
     margin-left: 50px;
 }
-
 .menu {
     margin-left: 100px;
     transition: 1s;
     display: flex;
     flex-direction: column;
 }
-
+.menu i{
+    margin-left: 70px;
+    margin-top: 200px;
+    scale: 1.5;
+    cursor: pointer;
+    color: var(--body-color);
+}
 .menu li {
     position: relative;
     margin: 20px;
@@ -127,7 +151,7 @@ header h1 {
     z-index: 300;
     height: 100%;
     width: 50px;
-    background-color: #fff;
+    background-color: var(--body-lines);
     position: fixed;
 }
 
@@ -139,7 +163,7 @@ header h1 {
     margin: 2px;
     width: 10px;
     height: 10px;
-    background-color: #161616;
+    background-color: var(--body-color);
     border-radius: 100%;
 }
 
@@ -149,7 +173,7 @@ header h1 {
     position: absolute;
     font-size: 0.8em;
     display: flex;
-    color: #161616;
+    color: var(--body-color);
     cursor: pointer;
 }
 
@@ -243,7 +267,7 @@ header h1 {
     left: 35%;
     font-size: 8em;
     font-weight: bolder;
-    color: #161616;
+    color: var(--body-color);
     transition: 1.5s;
     z-index: -100;
 }
@@ -266,7 +290,9 @@ header h1 {
     display: flex;
     flex-direction: column;
 }
-
+.texto span{
+    color: #fff;
+}
 .texto span:nth-child(2) {
     color: #161616;
 }
@@ -280,7 +306,7 @@ header h1 {
     right: 0;
     height: 100%;
     width: 50px;
-    background-color: #fff;
+    background-color: var(--body-lines);
     position: fixed;
 }
 
@@ -288,7 +314,7 @@ header h1 {
     bottom: 0;
     width: 100%;
     height: 50px;
-    background-color: #fff;
+    background-color: var(--body-lines);
     position: fixed;
 }
 
@@ -313,6 +339,7 @@ header h1 {
     font-size: 2em;
     text-align: center;
     margin-top: 50px;
+    color: var(--body-color);
 }
 
 .about-txt h2 {
@@ -348,7 +375,7 @@ header h1 {
 .links i {
     scale: 7;
     margin: 50px;
-    color: #161616;
+    color:var(--body-color);
 }
 .links i:hover {
     cursor: pointer;
@@ -365,6 +392,7 @@ header h1 {
 }
 
 .education h1 {
+    color: var(--body-color);
     font-weight: bolder;
     font-size: 3em;
     text-align: center;
@@ -373,7 +401,8 @@ header h1 {
 .education span{
     margin-top: 30px;
 }
-    .education p{
+.education p{
+    color: var(--body-color);
     margin: 10px;
     font-size: 2em;
 }
@@ -381,7 +410,7 @@ header h1 {
     margin: 0 auto;
     margin-top: 100px;
     transform: scale(7);
-    color: #161616;
+    color: var(--body-color);
 }
 
 .education i:hover {
@@ -399,6 +428,7 @@ header h1 {
 }
 
 .section-4 h1 {
+    color: var(--body-color);
     font-weight: bolder;
     font-size: 3em;
     text-align: center;
@@ -406,6 +436,7 @@ header h1 {
 }
 
 .section-4 h2 {
+    color: var(--body-color);
     font-weight: 200;
     font-size: 1.2em;
     text-align: center;
@@ -413,7 +444,7 @@ header h1 {
 }
 
 .icons-top i {
-    color: #161616;
+    color: var(--body-color);
     transform: scale(7);
     margin: 60px;
 }
@@ -445,7 +476,7 @@ header h1 {
 
 footer {
     position: absolute;
-    z-index: 10000;
+    z-index: 1000;
     width: 100%;
     height: 150px;
     background-color: #161616;
@@ -470,13 +501,16 @@ footer {
 .footer-txt span {
     font-size: 0.8em;
     font-weight: lighter;
+    color: #fff;
 }
 
 .footer-seta{
     display: flex;
     align-items: center;
+    color: #fff;
 }
 .footer-seta span{
+    color: #fff;
     font-size: 0.7em;
 }
 .back-top{
@@ -612,7 +646,7 @@ footer {
         display: none;
     }
     .menu{
-        margin-left: 60px;
+        margin-left: 30px;
     }
     .left-bar{
         height: 50px;
@@ -639,9 +673,32 @@ footer {
         display: none;
     }
 
+    footer{
+        z-index: 0;
+    }
     .footer-txt h1{
         margin-bottom: 5px;
         font-size: 1em;
         font-weight: bold;
     }
   }
+
+
+/* DARK MODE */
+
+/* body.dark-mode{
+    background-color: #161616 !important;
+    color: #F8F8F8;
+}
+.dark-mode .header, .right-bar, .bottom-bar, .left-bar, .menu-container{
+    background-color: #161616 !important;
+}
+.dark-mode h1, h2, span, p, li, i{
+    color: #fff;
+}
+.dark-mode .ball{
+    background-color: #fff !important;
+}
+.dark-mode i{
+    color: #fff !important;
+} */
