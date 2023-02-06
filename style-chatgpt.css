@@ -93,7 +93,7 @@ header h1 {
     display: flex;
     flex-direction: column;
 }
-.menu i{
+#dark-btn{
     margin-left: 70px;
     margin-top: 200px;
     scale: 1.5;
